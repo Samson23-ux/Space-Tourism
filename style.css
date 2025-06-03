@@ -24,6 +24,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 4rem;
+    overflow-x: hidden;
 }
 
 .nav-bar {

@@ -27,6 +27,10 @@ nav {
     overflow-x: hidden;
 }
 
+nav::-webkit-scrollbar {
+    display: none;
+}
+
 .nav-bar {
     display: flex;
     gap: 7rem;

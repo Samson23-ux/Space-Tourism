@@ -938,7 +938,7 @@ h1 {
     }
 
 
-    /*DESTINATION*/
+   /*DESTINATION*/
     .destination-mobile-bg {
         background-image: url(./assets/images/destination/background-destination-mobile.jpg);
         background-repeat: no-repeat;
@@ -976,14 +976,18 @@ h1 {
 
     #destination-name {
         font-size: 3.5rem;
+    }
+
+    .about-destionation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-left: -1.4rem;
+        margin-left: 8vw;
     }
 
     #destination-description {
         width: 83vw;
-        text-align: center;
-        margin-left: -5rem;
         font-size: 0.8rem;
     }
 

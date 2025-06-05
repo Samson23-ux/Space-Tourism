@@ -61,6 +61,31 @@ const mobile = window.matchMedia("(min-width: 360px) and (max-width: 480px)")
 function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
+
+        slider.addEventListener("scroll", (e) => {
+            sliderNav[currentSlide].style.backgroundColor = "white"
+
+            if (e.key === "ArrowRight") {
+                currentSlide++
+
+                if (currentSlide >= sliderNav.length) {
+                    currentSlide = sliderNav.length - 1;
+                    sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
+                    return
+                }
+
+            } else if (e.key === "ArrowLeft") {
+                currentSlide--
+
+                if (currentSlide < 0) {
+                    currentSlide = 0;
+                    sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
+                    return
+                }
+            }
+
+            sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
+        })
     }
 }
 

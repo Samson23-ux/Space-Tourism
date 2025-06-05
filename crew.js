@@ -57,12 +57,12 @@ tabletMedia(tablet)
 
 //MOBILE
 const mobile = window.matchMedia("(min-width: 360px) and (max-width: 480px)")
-
+let startX = 0;
 function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
 
-       slider.addEventListener("touchstart", (e) => {
+        slider.addEventListener("touchstart", (e) => {
             startX = e.touches[0].clientX
         })
 

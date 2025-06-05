@@ -965,12 +965,13 @@ h1 {
     }
 
     .destination {
-        margin-left: 2rem;
+        margin-left: 2.1rem;
         justify-content: center;
+        gap: 1.5rem;
     }
 
     .destination p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     #destination-name {

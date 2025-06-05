@@ -71,7 +71,7 @@ function mobileMedia(med) {
 
             sliderNav[currentSlide].style.backgroundColor = "white"
 
-            if (currentX > startX) {
+            if (currentX < startX) {
                 currentSlide++
 
                 if (currentSlide >= sliderNav.length) {
@@ -80,7 +80,7 @@ function mobileMedia(med) {
                     return
                 }
 
-            } else if (currentX < startX) {
+            } else if (currentX > startX) {
                 currentSlide--
 
                 if (currentSlide < 0) {

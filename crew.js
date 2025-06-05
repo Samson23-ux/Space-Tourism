@@ -62,7 +62,7 @@ function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
 
-        slider.addEventListener("scroll", (e) => {
+        slider.addEventListener("touchmove", (e) => {
             sliderNav[currentSlide].style.backgroundColor = "white"
 
             if (e.key === "ArrowRight") {

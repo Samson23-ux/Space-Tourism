@@ -24,11 +24,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-top: 4rem;
-    overflow-x: hidden;
-}
-
-nav::-webkit-scrollbar {
-    display: none;
 }
 
 .nav-bar {
@@ -48,7 +43,7 @@ nav::-webkit-scrollbar {
 }
 
 .intro-hr {
-    width: 32%;
+    width: 30%;
     position: absolute;
     left: 12rem;
     outline: none;
@@ -692,10 +687,7 @@ h1 {
     }
 
     .slider-nav {
-        justify-content: center;
-        width: fit-content;
-        top: 36rem;
-        left: 19rem;
+        display: none;
     }
 
     #role {
@@ -938,7 +930,7 @@ h1 {
     }
 
 
-   /*DESTINATION*/
+    /*DESTINATION*/
     .destination-mobile-bg {
         background-image: url(./assets/images/destination/background-destination-mobile.jpg);
         background-repeat: no-repeat;
@@ -1034,6 +1026,7 @@ h1 {
         letter-spacing: 0.2rem;
     }
 
+
     /*CREW*/
     .crew-mobilebg {
         background-image: url(./assets/images/crew/background-crew-mobile.jpg);
@@ -1044,6 +1037,7 @@ h1 {
     .crew-container {
         overflow-y: hidden;
         transition: 0.5s;
+        width: 100%;
     }
 
     .crew-container-active {
@@ -1055,6 +1049,7 @@ h1 {
         left: 0;
         width: 100vw;
         height: fit-content;
+        border: 1px solid red;
     }
 
     .crew-details {
@@ -1102,7 +1097,7 @@ h1 {
         margin-left: 9.5vw;
     }
 
-    .crew-image1 img{
+    .crew-image1 img {
         width: 85vw;
     }
 
@@ -1124,7 +1119,7 @@ h1 {
         margin-left: 18vw;
     }
 
-    .crew-image2 img{
+    .crew-image2 img {
         width: 65vw;
     }
 
@@ -1136,7 +1131,7 @@ h1 {
         margin-left: 28vw;
     }
 
-    .crew-image3 img{
+    .crew-image3 img {
         width: 80vw;
         margin-left: 1vw;
     }
@@ -1149,16 +1144,13 @@ h1 {
         margin-left: 23vw;
     }
 
-    .crew-image4 img{
+    .crew-image4 img {
         width: 80vw;
         margin-left: 8vw;
     }
 
     .slider-nav {
-        top: -60vh;
-        left: 30vw;
-        width: fit-content;
-        position: relative;
+        display: none;
     }
 
 
@@ -1207,6 +1199,7 @@ h1 {
     .tech-name {
         font-size: 1.8rem;
     }
+
     .tech-description {
         width: 100%;
     }

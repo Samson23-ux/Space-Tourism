@@ -1013,8 +1013,11 @@ h1 {
         margin-left: -2.5rem;
     }
 
-    .destination-duration h4 {
-        margin-left: -1rem;
+    .destination-duration {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #destination_hr {

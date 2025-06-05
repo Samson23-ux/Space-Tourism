@@ -3,7 +3,7 @@ const slider = document.querySelector('.slider-wrapper');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.intersectionRatio >= 0.97) {
-        entry.target.focus()
+            entry.target.focus()
         }
     })
 }, {
@@ -45,7 +45,7 @@ slider.addEventListener("keydown", (e) => {
 
 const tablet = window.matchMedia("(min-width: 600px) and (max-width: 1200px)")
 function tabletMedia(med) {
-    if(med.matches) {
+    if (med.matches) {
         document.body.classList.add("crew-tablet-bg")
     } else {
         document.body.classList.add("crew-dekstop-bg")
@@ -57,42 +57,17 @@ tabletMedia(tablet)
 
 //MOBILE
 const mobile = window.matchMedia("(min-width: 360px) and (max-width: 480px)")
-let startX = 330;
+
 function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
 
-        slider.addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX
-        })
+        new Swiper('.crew-container', {
+            loop: true,
 
-        slider.addEventListener("touchmove", (e) => {
-            const currentX = e.touches[0].clientX
-
-            sliderNav[currentSlide].style.backgroundColor = "white"
-
-            if (currentX < startX) {
-                currentSlide++
-
-                if (currentSlide >= sliderNav.length) {
-                    currentSlide = sliderNav.length - 1;
-                    sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
-                    return
-                }
-
-            } else if (currentX > startX) {
-                currentSlide--
-
-                if (currentSlide < 0) {
-                    currentSlide = 0;
-                    sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
-                    return
-                }
+            pagination: {
+                el: '.slider-nav'
             }
-
-            sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
-
-            startX = currentX;
         })
     }
 }

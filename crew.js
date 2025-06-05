@@ -62,10 +62,16 @@ function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
 
+       slider.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX
+        })
+
         slider.addEventListener("touchmove", (e) => {
+            const currentX = e.touches[0].clientX
+
             sliderNav[currentSlide].style.backgroundColor = "white"
 
-            if (e.key === "ArrowRight") {
+            if (currentX > startX) {
                 currentSlide++
 
                 if (currentSlide >= sliderNav.length) {
@@ -74,7 +80,7 @@ function mobileMedia(med) {
                     return
                 }
 
-            } else if (e.key === "ArrowLeft") {
+            } else if (currentX < startX) {
                 currentSlide--
 
                 if (currentSlide < 0) {

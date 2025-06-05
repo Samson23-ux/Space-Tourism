@@ -91,6 +91,8 @@ function mobileMedia(med) {
             }
 
             sliderNav[currentSlide].style.backgroundColor = "rgba(30, 36, 51, 0.8)"
+
+            startX = currentX;
         })
     }
 }

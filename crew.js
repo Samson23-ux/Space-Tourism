@@ -61,14 +61,6 @@ const mobile = window.matchMedia("(min-width: 360px) and (max-width: 480px)")
 function mobileMedia(med) {
     if (med.matches) {
         document.body.classList.add("crew-mobilebg")
-
-        new Swiper('.crew-container', {
-            loop: true,
-
-            pagination: {
-                el: '.slider-nav'
-            }
-        })
     }
 }
 
